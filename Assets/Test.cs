@@ -8,32 +8,49 @@ public class Test : MonoBehaviour
 		DistanceJoint2D distJoint ;
 		bool jumping = false;
 		Transform shadow;
-		float  jump = 0;
+		static float  jump = 0;
+		Vector3 pos;
 		// Use this for initialization
 		void Start ()
 		{
 				shadow = GameObject.Find ("Shadow").transform;
-
-				//distJoint = (DistanceJoint2D) gameObject.GetComponent("DistanceJoint2D");
+				transform.position = new Vector3 (shadow.position.x, shadow.position.y, shadow.position.z ) ; 
 		}
 		// Update is called once per frame
 		void Update ()
-		{
-			if (Input.GetKey ("space")) {
-				Jump();
-			jumping = true;
-			} else if (jumping) {
-				jump = -1;
-			} else {
-				jump = 0;
-			jumping = false;
-				transform.position = new Vector3 (shadow.position.x + jump, 
-			                                  shadow.position.y + jump,
-			                                  transform.position.z - jump);
+			{
+				if (Input.GetKey ("space")) {
+					Jump ();
+				}
+				else {
+					Fall();
+					
+				}
+					
+					transform.position = new Vector3 (shadow.position.x + jump, 
+  				                                  shadow.position.y + jump,
+  				                                  transform.position.z - jump);
+
+
+//				transform.position = new Vector3 (shadow.position.x, shadow.position.y, shadow.position.z);
+//				pos = new Vector3 (shadow.position.x + jump, 
+//			                    shadow.position.y + jump,
+//			                    transform.position.z - jump);
+//				if (shadow.position.x < pos.x) {
+//						transform.position = new Vector3 (shadow.position.x + jump, 
+//				                                  shadow.position.y + jump,
+//				                                  transform.position.z - jump);
+//				}
+
+			
+		}
+		void Jump(){
+			jump += .01f;
+		}
+		void Fall() {
+
+			if (jump > 0) {
+				jump -= 0.2f;
 			}
 		}
-
-		void Jump(){
-			jump = 1;
-	}
 }
