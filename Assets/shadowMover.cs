@@ -17,6 +17,8 @@ public class shadowMover : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
+		//TODO make sure shadow is on floor.
+
 		GameObject road =  GameObject.Find ("Road");
 		yUpperBound = road.transform.position.y + road.renderer.bounds.size.y / 2;
 		yLowerBound = road.transform.position.y -road.renderer.bounds.size.y / 2;
@@ -25,7 +27,7 @@ public class shadowMover : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {		
+	void Update () {
 		if (Input.GetKey (KeyCode.D) && !(transform.position.x >= xUpperBound)) {
 			transform.position = new Vector3 (transform.position.x+0.1f, transform.position.y, transform.position.z );
 		}
