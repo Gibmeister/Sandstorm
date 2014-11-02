@@ -27,9 +27,14 @@ public class Test : MonoBehaviour
 					
 				}
 					
-					transform.position = new Vector3 (shadow.position.x + jump, 
-  				                                  shadow.position.y + jump,
-  				                                  transform.position.z - jump);
+					//transform.position = new Vector3 (shadow.position.x + jump, 
+  				    //                              shadow.position.y + jump,
+  				    //                              transform.position.z - jump);
+
+
+			if (transform.position.y > shadow.position.y) {
+				
+				}
 
 
 //				transform.position = new Vector3 (shadow.position.x, shadow.position.y, shadow.position.z);
@@ -45,12 +50,19 @@ public class Test : MonoBehaviour
 			
 		}
 		void Jump(){
-			jump += .01f;
+		//	jump += .01f;
+		transform.position = new Vector3 (transform.position.x + .01f, 
+		                                  transform.position.y + .01f,
+		                                  transform.position.z - .01f);
 		}
 		void Fall() {
 
 			if (jump > 0) {
-				jump -= 0.2f;
+				//jump -= 0.2f;
+			
+			transform.position = new Vector3 (transform.position.x - .02f, 
+			                                  transform.position.y - .02f,
+			                                  transform.position.z + .02f);
 			}
 		}
 }

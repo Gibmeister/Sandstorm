@@ -1,8 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Test.cs">
     <Files>
-      <File FileName="Assets\Test.cs" Line="26" Column="4" />
+      <File FileName="Assets\Test.cs" Line="6" Column="2" />
+      <File FileName="Assets\shadowMover.cs" Line="29" Column="34" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
