@@ -5,7 +5,7 @@ public class Test : MonoBehaviour
 {
 	float jumpSpeed = 0.15f;
 	float fallSpeed = 0.15f;
-	float maxJumpHeight = 15;
+	float maxJumpHeight = 3;
 
 
 

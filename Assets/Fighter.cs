@@ -3,8 +3,10 @@ using System.Collections;
 
 public class Fighter : MonoBehaviour {
 	Animator anim;
+	Transform hero;
 	// Use this for initialization
 	void Start () {
+		hero = GameObject.Find ("Hero").transform;
 		anim = (Animator)GetComponent("Animator");
 	} 
 	
@@ -17,10 +19,15 @@ public class Fighter : MonoBehaviour {
 			anim.SetInteger("kick", 0);
 		}
 
-		if (Input.GetKey(KeyCode.D)) {
+		if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.W)) {
 			anim.SetInteger("running", 1);
 		} else {
 			anim.SetInteger("running", 0);
 		}
-	}	
+
+		transform.position = hero.position;
+	}
+
+
+
 }
