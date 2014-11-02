@@ -14,7 +14,7 @@ public class Test : MonoBehaviour
 		void Start ()
 		{
 				shadow = GameObject.Find ("Shadow").transform;
-				transform.position = new Vector3 (shadow.position.x, shadow.position.y, shadow.position.z ) ; 
+				//transform.position = new Vector3 (shadow.position.x, shadow.position.y, shadow.position.z ) ; 
 		}
 		// Update is called once per frame
 		void Update ()
