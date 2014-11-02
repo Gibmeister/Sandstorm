@@ -3,66 +3,63 @@ using System.Collections;
 
 public class Test : MonoBehaviour
 {
+	float jumpSpeed = 0.15f;
+	float fallSpeed = 0.15f;
+	float maxJumpHeight = 15;
 
-		Vector2 jumpForce = new Vector2 (0, 2);
-		DistanceJoint2D distJoint ;
-		bool jumping = false;
-		Transform shadow;
-		static float  jump = 0;
-		Vector3 pos;
-		// Use this for initialization
-		void Start ()
-		{
-				shadow = GameObject.Find ("Shadow").transform;
-				//transform.position = new Vector3 (shadow.position.x, shadow.position.y, shadow.position.z ) ; 
+
+
+bool falling = false;
+Transform shadow;
+Transform oldShadow;
+static float  jump = 0;
+// Use this for initialization
+void Start ()
+{
+		shadow = GameObject.Find ("Shadow").transform;
+		oldShadow = shadow;
+}
+// Update is called once per frame
+void Update ()
+{
+	if (transform.position.y > oldShadow.transform.position.y) {
+		//Updating new position.
+		float yPosi = shadow.transform.position.y + jump;
+		transform.position = new Vector3 (shadow.transform.position.x, yPosi, transform.position.z);
+	} else {
+		transform.position = new Vector3 (shadow.transform.position.x, shadow.transform.position.y, transform.position.z);
+	}
+	if (Input.GetKey ("space")) {
+		if(!falling && Mathf.Abs(transform.position.y-oldShadow.position.y)<maxJumpHeight ) {
+			Jump();
+		} else {
+			Fall();
 		}
-		// Update is called once per frame
-		void Update ()
-			{
-				if (Input.GetKey ("space")) {
-					Jump ();
-				}
-				else {
-					Fall();
-					
-				}
-					
-					//transform.position = new Vector3 (shadow.position.x + jump, 
-  				    //                              shadow.position.y + jump,
-  				    //                              transform.position.z - jump);
-
-
-			if (transform.position.y > shadow.position.y) {
-				
-				}
-
-
-//				transform.position = new Vector3 (shadow.position.x, shadow.position.y, shadow.position.z);
-//				pos = new Vector3 (shadow.position.x + jump, 
-//			                    shadow.position.y + jump,
-//			                    transform.position.z - jump);
-//				if (shadow.position.x < pos.x) {
-//						transform.position = new Vector3 (shadow.position.x + jump, 
-//				                                  shadow.position.y + jump,
-//				                                  transform.position.z - jump);
-//				}
-
-			
-		}
-		void Jump(){
-		//	jump += .01f;
-		transform.position = new Vector3 (transform.position.x + .01f, 
-		                                  transform.position.y + .01f,
-		                                  transform.position.z - .01f);
-		}
-		void Fall() {
-
-			if (jump > 0) {
-				//jump -= 0.2f;
-			
-			transform.position = new Vector3 (transform.position.x - .02f, 
-			                                  transform.position.y - .02f,
-			                                  transform.position.z + .02f);
-			}
-		}
+	} else {
+		Fall();
+	}
+	oldShadow = shadow;
+}
+void Jump(){
+	jump += jumpSpeed;
+	transform.position = new Vector3 (transform.position.x, 
+	                                  shadow.transform.position.y + jump,
+	                                  transform.position.z);
+}
+void Fall() {
+	if (transform.position.y > oldShadow.transform.position.y) {
+		jump -= fallSpeed;
+		falling = true;
+		transform.position = new Vector3 (transform.position.x, 
+	                         shadow.transform.position.y + jump,
+	                         transform.position.z);
+	} else if (transform.position.y != oldShadow.transform.position.y) {
+		falling = false;
+		transform.position = new Vector3 (transform.position.x, 
+	                         oldShadow.transform.position.y,
+	                         transform.position.z);
+	} else {
+		falling = false;
+	}
+}
 }
