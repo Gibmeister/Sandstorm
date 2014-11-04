@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Fighter.cs" />
+     <Compile Include="Assets\RunnerMovement.cs" />
      <Compile Include="Assets\Test.cs" />
      <Compile Include="Assets\shadowMover.cs" />
   </ItemGroup>
