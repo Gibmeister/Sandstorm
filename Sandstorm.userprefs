@@ -1,10 +1,8 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\shadowMover.cs">
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="..\..\Documents\Sandstormv2\Assets\RunnerMovement.cs">
     <Files>
-      <File FileName="Assets\Test.cs" Line="66" Column="1" />
-      <File FileName="Assets\shadowMover.cs" Line="13" Column="17" />
-      <File FileName="Assets\Fighter.cs" Line="22" Column="11" />
+      <File FileName="..\..\Documents\Sandstormv2\Assets\RunnerMovement.cs" Line="51" Column="34" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

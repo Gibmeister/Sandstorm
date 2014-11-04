@@ -10,27 +10,7 @@ Platform assembly: C:\Users\Ulrohn\Desktop\Sandstorm\tt_Data\Managed\UnityEngine
 Loading C:\Users\Ulrohn\Desktop\Sandstorm\tt_Data\Managed\UnityEngine.dll into Unity Child Domain
 Platform assembly: C:\Users\Ulrohn\Desktop\Sandstorm\tt_Data\Managed\Assembly-CSharp.dll (this message is harmless)
 Loading C:\Users\Ulrohn\Desktop\Sandstorm\tt_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-- Completed reload, in  0.078 seconds
+- Completed reload, in  0.053 seconds
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
-HDR RenderTexture format is not supported on this platform. This camera will render without HDR buffers.
- 
-(Filename:  Line: 2452)
-
-here
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-here
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-here
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-here
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
