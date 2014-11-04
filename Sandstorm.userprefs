@@ -1,8 +1,9 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="..\..\Documents\Sandstormv2\Assets\RunnerMovement.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\SpriteCastsShadows.cs">
     <Files>
-      <File FileName="..\..\Documents\Sandstormv2\Assets\RunnerMovement.cs" Line="51" Column="34" />
+      <File FileName="Assets\SpriteCastsShadows.cs" Line="16" Column="2" />
+      <File FileName="Assets\RunnerMovement.cs" Line="15" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

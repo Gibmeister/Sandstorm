@@ -48,8 +48,10 @@
   <ItemGroup>
      <Compile Include="Assets\Fighter.cs" />
      <Compile Include="Assets\RunnerMovement.cs" />
+     <Compile Include="Assets\SpriteCastsShadows.cs" />
      <Compile Include="Assets\Test.cs" />
      <Compile Include="Assets\shadowMover.cs" />
+     <None Include="Assets\$CutoutBumpwithShadows.shader" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
